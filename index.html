@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="estilo.css">
+  <title>Servicio Web</title>
+  <link rel="icon" href="./img/logo-web.png">
+
+
+</head>
+
+<body class="container-fluid">
+
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <img src="./img/logo-web.png" height="65" width="65" alt="logo Web">
+
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-dark" type="submit">Search</button>
+      </form>
+    </div>
+    <img src="./SITIOS WEB CORPORATIVOS.png" class="img-fluid shadow" alt="imagen de fondo">
+  </nav>
+
+  <!------------TARJETAS DE INFORMACION------------------>
+  <div class="row margen">
+    <div class="col-sm-6 mb-3 mb-sm-0">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Curso de JS</h5>
+          <p class="card-text">JavaScript (JS) es un lenguaje de programación de alto nivel utilizado principalmente en
+            el desarrollo web.
+            Es versátil y permite la creación de interactividad en las páginas web, como animaciones, formularios y
+            efectos visuales.
+            JS se ejecuta en el lado del cliente, lo que significa que el código se ejecuta en el navegador web del
+            usuario, lo que lo convierte en una herramienta poderosa para mejorar la experiencia del usuario en sitios
+            web.</p>
+          <a href="#" class="btn1">Enviar</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Curso de React</h5>
+          <p class="card-text">ReactJS es una biblioteca de JavaScript de código abierto que se utiliza para construir
+            interfaces de usuario interactivas y dinámicas. Desarrollado por Facebook, ReactJS se basa en el concepto de
+            componentes reutilizables, lo que facilita la creación de interfaces de usuario modulares y escalables.Esto
+            hace que ReactJS sea especialmente adecuado para aplicaciones web de una sola página (SPA) y aplicaciones
+            móviles.
+            Al utilizar un lenguaje de marcado llamado JSX, ReactJS combina HTML y JavaScript
+          </p>
+          <a href="#" class="btn1">Enviar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <hr class="border border-danger border-2 opacity-50">
+  </hr>
+  <h1>Formulario de pago</h1>
+
+  <!------------Formulario de pago-------------------------->
+  <form>
+    <div>
+      <div class="mb-3">
+        <span>Nombre de usuario</span>
+        <input type="text" aria-label="First name" class="form-control">
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email valido</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más..</div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+      </div>
+      <a href="#" type="submit" class="btn1">Enviar</a>
+    </div>
+    <hr>
+    <h4 class="mb-3">Pago</h4>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+      <label class="form-check-label" for="flexRadioDefault1">
+        Tarjeta de credito
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+      <label class="form-check-label" for="flexRadioDefault1">
+        Tarjeta de debito
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+      <label class="form-check-label" for="flexRadioDefault1">
+        Paypal
+      </label>
+    </div>
+    <div class="row gy-3">
+      <div class="col-md-6">
+        <label for="cc-name" class="form-label">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Nombre en la tarjeta</font>
+          </font>
+        </label>
+        <input type="text" class="form-control" id="cc-name" placeholder="" required="">
+        <small class="text-body-secondary">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Nombre completo como se muestra en la tarjeta</font>
+          </font>
+        </small>
+        <div class="invalid-feedback">
+          Name on card is required
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <label for="cc-number" class="form-label">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Número de Tarjeta de Crédito</font>
+          </font>
+        </label>
+        <input type="text" class="form-control" id="cc-number" placeholder="" required="">
+        <div class="invalid-feedback">
+          Credit card number is required
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <label for="cc-expiration" class="form-label">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Vencimiento</font>
+          </font>
+        </label>
+        <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
+        <div class="invalid-feedback">
+          Expiration date required
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <label for="cc-cvv" class="form-label" style="vertical-align: inherit;"
+          style="vertical-align: inherit;">CVV</label>
+        <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+        <div class="invalid-feedback">
+          Security code required
+        </div>
+      </div>
+    </div>
+    <hr class="my-4">
+    <button class="w-100 btn btn-dark btn-lg"> Enviar </button>
+  </form>
+
+  <!-----------galeria de prueba ------------------>
+  <h1>Nuestros productos mas vendidos</h1>
+ <div class="gallery">
+  <div class="item">
+    <img src="./img/img1.png">
+    <h3>Reloj Watch</h3>
+    <p>Precio: $10,000</p>
+    <button class="add-to-cart" data-product-id="1">Agregar al Carrito</button>
+  </div>
+  <div class="item">
+    <img src="./img/img2.png">
+    <h3>Reloj Watch 720</h3>
+    <p>Precio: $20,000</p>
+    <button class="add-to-cart" data-product-id="2">Agregar al Carrito</button>
+  </div>
+  <div class="item">
+    <img src="./img/img3.png">
+    <h3>Galaxy Buds2 Pro Grafito</h3>
+    <p>Precio: $45,230</p>
+    <button class="add-to-cart" data-product-id="3">Agregar al Carrito</button>
+  </div>
+  <div class="item">
+    <img src="./img/img4.png">
+    <h3>Auricular Exodus ANC</h3>
+    <p>Precio: $75,5600</p>
+    <button class="add-to-cart" data-product-id="4">Agregar al Carrito</button>
+  </div>
+  <!-- Agrega más elementos de galería aquí -->
+</div>
+
+<div class="cart">
+  <h2>Carrito de Compras</h2>
+  <ul id="cart-items"></ul>
+  <p>Total: <span id="cart-total">$0</span></p>
+  <button class="btn1" id="clear-cart">Vaciar Carrito</button>
+</div>
+  
+
+    
+
+
+
+  <div class="h4 pb-2 mb-4 text-danger border-bottom border-danger">
+    <H2>Nuestros mejores productos</H2>
+  </div>
+
+ 
+
+  <footer>
+    <div class="content">
+      <P>Aca podes encontrar todo lo que buscas para tu negocio y impulsarlo</P>
+
+      <ul class="algo">
+        <li>Sobre Nosotros</li>
+        <li>Contacto</li>
+        <li>Promociones</li>
+      </ul>
+    </div>
+
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
