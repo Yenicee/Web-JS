@@ -7,7 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-  <link rel="stylesheet" href="estilo.css">
+ <!--libreria JS-->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css">
+   <!--CSS mio el link-->
+ <link rel="stylesheet" href="estilo.css">
   <title>Servicio Web</title>
   <link rel="icon" href="./img/logo-web.png">
 
@@ -70,25 +73,27 @@
   <h1>Formulario de pago</h1>
 
   <!------------Formulario de pago-------------------------->
-  <form>
+  <form id="formulario" onsubmit="enviarDatos(event)">
     <div>
       <div class="mb-3">
         <span>Nombre de usuario</span>
-        <input type="text" aria-label="First name" class="form-control">
+        <input type="text" aria-label="First name" class="form-control" id="nombre">
       </div>
 
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email valido</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más..</div>
+        <label for="exampleInputEmail1" class="form-label">Email válido</label>
+        <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
       </div>
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
+        <input type="password" class="form-control" id="contrasena">
       </div>
-      <a href="#" type="submit" class="btn1">Enviar</a>
     </div>
+    <button type="submit" class="btn1">Enviar</button>
+  </form>
     <hr>
+    <!-----------------------------ACA ARRANCA LO DE LA CREDITO TARJETA---------------------------------------->
     <h4 class="mb-3">Pago</h4>
     <div class="form-check">
       <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
@@ -161,7 +166,8 @@
     </div>
     <hr class="my-4">
     <button class="w-100 btn btn-dark btn-lg"> Enviar </button>
-  </form>
+ 
+
 
   <!-----------galeria de prueba ------------------>
   <h1>Nuestros productos mas vendidos</h1>
@@ -224,10 +230,12 @@
 
   </footer>
 
-  <script src="main.js"></script>
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
+    <script src="main.js"></script>
+  </body>
 
 </html>

@@ -264,5 +264,82 @@ function saveCartData() {
   localStorage.setItem('cartItems', JSON.stringify(cartItems));
 }
 
+//SWEETALERT
 
+// Swal.fire(
+//   {
+//     title: 'Sea bienvenido',
+//     icon:'success',
+//     iconColor: '#85c1e9',
+//     //da los segundos y desaparece solo
+//    // timer: '5000',
+//     //input pone datos de la persona
+//     input: 'text' ,
+//     inputPlaceholder: 'Ingrese tu edad',
+//     min: 17,
+//     max: 100,
+//     step:1
+//   }
+// );
+
+//entrada 
+
+Swal.fire({
+  title: 'Me indicas tu edad?',
+  icon: 'question',
+  input: 'range',
+  inputLabel: 'Su edad',
+  inputAttributes: {
+    min: 8,
+    max: 120,
+    step: 1
+  },
+  inputValue: 25
+})
+
+
+
+//CREAR FETCH CARGA DE DATOS NUEVOS PARA LA ENTREGA FINAL
+
+function enviarDatos(event) {
+  event.preventDefault();
+
+  // Obtener los valores del formulario
+  var nombre = document.getElementById('nombre').value;
+  var email = document.getElementById('email').value;
+  var contrasena = document.getElementById('contrasena').value;
+
+  // Crear un objeto con los datos del formulario
+  var datos = {
+    nombre: nombre,
+    email: email,
+    contrasena: contrasena
+  };
+
+  // Enviar los datos al servidor utilizando Fetch
+  fetch('https://jsonplaceholder.typicode.com/posts', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(datos)
+  })
+  .then(function(response) {
+    if (response.ok) {
+      return response.json();
+    } else {
+      throw new Error('Error en la respuesta del servidor');
+    }
+  })
+  .then(function(data) {
+    // Aquí puedes manejar la respuesta del servidor
+    console.log(data);
+    alert('Datos enviados correctamente');
+  })
+  .catch(function(error) {
+    // Aquí puedes manejar los errores
+    console.log(error);
+    alert('Error al enviar los datos');
+  });
+}
 
